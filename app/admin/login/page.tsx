@@ -32,7 +32,7 @@ export default function LoginPage() {
 
       router.push('/admin/dashboard')
       router.refresh()
-    } catch (err) {
+    } catch {
       setError('Erro ao fazer login')
       setLoading(false)
     }

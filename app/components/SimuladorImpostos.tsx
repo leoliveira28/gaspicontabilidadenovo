@@ -21,7 +21,6 @@ export default function SimuladorImpostos() {
   const [temFuncionarios, setTemFuncionarios] = useState<string>('')
   const [quantidadeFuncionarios, setQuantidadeFuncionarios] = useState('')
   const [resultado, setResultado] = useState<SimulacaoResultado | null>(null)
-  const [loading, setLoading] = useState(false)
 
   const atividades = [
     { value: 'prestador_servico', label: 'Prestador de Serviços', aliquotaSimples: 15.5, aliquotaLucro: 16.33 },
