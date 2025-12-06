@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { seoConfig } from './config/seo'
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   metadataBase: new URL(seoConfig.siteUrl),
@@ -111,7 +112,7 @@ export default function GaspiLayout({
         />
       </head>
       <body>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
