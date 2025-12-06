@@ -1,0 +1,11 @@
+# robots.txt - Gaspi Contabilidade
+# Permite que todos os mecanismos de busca indexem o site
+
+User-agent: *
+Allow: /
+
+# Bloquear indexação de API routes
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://gaspicontabilidade.com.br/sitemap.xml

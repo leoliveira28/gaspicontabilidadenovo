@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Check, Calculator, MessageCircle, Instagram } from 'lucide-react'
+import { ArrowRight, Check, Calculator, MessageCircle, Instagram, MapPin } from 'lucide-react'
 
 export default function FinalCTA() {
   const benefits = [
@@ -174,6 +174,17 @@ export default function FinalCTA() {
                   WhatsApp
                 </span>
               </a>
+            </div>
+
+            {/* Endereço */}
+            <div className="flex items-start justify-center gap-3 mb-6 text-[var(--gaspi-text-secondary)]">
+              <MapPin className="w-5 h-5 text-[var(--gaspi-accent-primary)] flex-shrink-0 mt-0.5" />
+              <div className="text-sm text-center">
+                <p className="font-semibold text-white mb-1">Gaspi Contabilidade</p>
+                <p>Rua Cosmorama, Nº 18, Sala 6</p>
+                <p>Vila Ideal - CEP 15060-320</p>
+                <p>São José do Rio Preto - SP</p>
+              </div>
             </div>
 
             <p className="text-sm text-[var(--gaspi-text-secondary)]">© 2025 Gaspi Contabilidade. Todos os direitos reservados.</p>
