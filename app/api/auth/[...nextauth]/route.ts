@@ -13,24 +13,48 @@ export const authOptions: AuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
+          console.log('❌ Credenciais faltando')
           return null
         }
 
-        // Usuário admin hardcoded (você pode adicionar mais usuários aqui ou usar banco de dados)
+        // Usuário admin hardcoded
         const adminEmail = process.env.ADMIN_EMAIL || 'admin@gaspicontabilidade.com.br'
         const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH || ''
 
-        if (credentials.email === adminEmail) {
-          // Verificar senha
-          const isValid = await bcrypt.compare(credentials.password, adminPasswordHash)
+        console.log('🔍 Tentativa de login:', {
+          emailDigitado: credentials.email,
+          adminEmail: adminEmail,
+          hashDisponivel: !!adminPasswordHash,
+          hashLength: adminPasswordHash.length
+        })
 
-          if (isValid) {
-            return {
-              id: '1',
-              email: adminEmail,
-              name: 'Admin Gaspi',
-            }
+        if (credentials.email === adminEmail) {
+          if (!adminPasswordHash) {
+            console.log('❌ Hash da senha não configurado no .env.local')
+            return null
           }
+
+          try {
+            // Verificar senha
+            const isValid = await bcrypt.compare(credentials.password, adminPasswordHash)
+
+            console.log('🔐 Resultado da verificação:', isValid)
+
+            if (isValid) {
+              console.log('✅ Login bem-sucedido!')
+              return {
+                id: '1',
+                email: adminEmail,
+                name: 'Admin Gaspi',
+              }
+            } else {
+              console.log('❌ Senha incorreta')
+            }
+          } catch (error) {
+            console.error('❌ Erro ao comparar senha:', error)
+          }
+        } else {
+          console.log('❌ Email não corresponde ao admin')
         }
 
         return null

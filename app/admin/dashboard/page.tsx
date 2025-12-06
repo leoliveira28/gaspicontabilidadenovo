@@ -4,7 +4,7 @@ import { useSession, signOut } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { LogOut, Users, TrendingDown, Calendar, Download } from 'lucide-react'
-import type { GaspiLead } from '../../api/leads/route'
+import type { GaspiLead } from '../../api/gaspi/leads/route'
 
 export default function DashboardPage() {
   const { data: session, status } = useSession()
@@ -31,7 +31,7 @@ export default function DashboardPage() {
 
   const fetchLeads = async () => {
     try {
-      const response = await fetch('/api/leads')
+      const response = await fetch('/api/gaspi/leads')
       const data = await response.json()
 
       if (data.success) {

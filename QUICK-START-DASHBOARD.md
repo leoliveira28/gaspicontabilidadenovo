@@ -9,7 +9,7 @@ http://localhost:3000/admin/login
 
 ### **2. Credenciais Padrão** (Já Configuradas)
 - **Email**: `admin@gaspicontabilidade.com.br`
-- **Senha**: `gaspi2025`
+- **Senha**: `admin123`
 
 ⚠️ **IMPORTANTE**: Altere esta senha após o primeiro login!
 
@@ -91,7 +91,7 @@ npm run dev
 ### **"Email ou senha inválidos"**
 - Verifique se digitou corretamente:
   - Email: `admin@gaspicontabilidade.com.br`
-  - Senha: `gaspi2025`
+  - Senha: `admin123`
 
 ### **Página em branco ou erro**
 - Reinicie o servidor: Ctrl+C e `npm run dev`
