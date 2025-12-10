@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { seoConfig } from './config/seo'
 import { Providers } from './providers'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(seoConfig.siteUrl),
@@ -113,6 +114,7 @@ export default function GaspiLayout({
       </head>
       <body>
         <Providers>{children}</Providers>
+        <GoogleAnalytics gaId="G-42X4BNFJLK" />
       </body>
     </html>
   )
