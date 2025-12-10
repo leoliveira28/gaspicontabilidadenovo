@@ -188,6 +188,17 @@ export default function FinalCTA() {
             </div>
 
             <p className="text-sm text-[var(--gaspi-text-secondary)]">© 2025 Gaspi Contabilidade. Todos os direitos reservados.</p>
+            <p className="text-sm text-[var(--gaspi-text-secondary)] mt-2">
+              Feito com ❤️{' '}
+              <a
+                href="https://criesualp.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--gaspi-accent-primary)] hover:underline transition-all"
+              >
+                criesualp.com.br
+              </a>
+            </p>
           </motion.div>
         </div>
       </div>
