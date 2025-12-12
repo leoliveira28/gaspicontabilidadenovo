@@ -15,7 +15,7 @@ Configuradas em `app/config/seo.ts`:
 - contador são josé do rio preto
 - escritório contabilidade são josé do rio preto
 - contabilidade são josé rio preto
-- contador rio preto
+- contador rio preto 
 
 **Serviços específicos:**
 - planejamento tributário

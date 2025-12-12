@@ -65,8 +65,13 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <a href="https://connect.calima.app/" target="_blank" rel="noopener noreferrer">
+              <button className="px-4 py-2 text-sm font-medium text-[var(--gaspi-accent-primary)] border border-[var(--gaspi-accent-primary)] rounded-lg hover:bg-[var(--gaspi-accent-primary)] hover:text-white transition-all">
+                Área do Cliente
+              </button>
+            </a>
             <a href="#simulador">
               <button className="btn-primary flex items-center gap-2 py-2.5 px-6 text-sm">
                 <Calculator className="w-4 h-4" />
@@ -110,6 +115,11 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
+              <a href="https://connect.calima.app/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+                <button className="w-full px-4 py-2.5 text-sm font-medium text-[var(--gaspi-accent-primary)] border border-[var(--gaspi-accent-primary)] rounded-lg hover:bg-[var(--gaspi-accent-primary)] hover:text-white transition-all">
+                  Área do Cliente
+                </button>
+              </a>
               <a href="#simulador" onClick={() => setIsMobileMenuOpen(false)}>
                 <button className="btn-primary w-full flex items-center justify-center gap-2">
                   <Calculator className="w-4 h-4" />
